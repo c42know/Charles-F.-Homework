@@ -125,7 +125,8 @@ plt.ylabel("Max Temperature")
 plt.savefig("Lat_VS_TMax.png")
 plt.show()
 
-
+#--------------OBSERVABLE TREMD #1-----------------#
+#Temperature is a lot higher around the equater, but more concentration of colder cities down of the equater in this data set.
 ```
 
 ```python
@@ -144,6 +145,8 @@ plt.xlabel("Latitude")
 plt.ylabel("Humidity")
 plt.savefig("Lat_VS_Humid.png")
 plt.show()
+#--------------OBSERVABLE TREMD #2-----------------#
+#As expected humidity is higher around the equater.
 ```
 
 ```python
@@ -162,6 +165,10 @@ plt.xlabel("Latitude")
 plt.ylabel("Cloudiness (%)")
 plt.savefig("Lat_VS_Cloud.png")
 plt.show()
+
+#--------------OBSERVABLE TREMD #1-----------------#
+#Closer towards the equator leads to higher humidity and more clouds.
+
 ```
 
 ```python
