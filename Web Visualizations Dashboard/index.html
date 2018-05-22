@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>HTML Weather analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class= "navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Changes in Latitudes</a>
+            </div>      
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Comparison <span class="sr-only">(current)</span></a></li>
+                    <li><a href="data.html">Data</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                             <span class="caret"></span>
+                        </a>
+                    
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="temperature.html">Temperature</a>
+                        </li>
+                        <li>
+                            <a href="humidity.html">Humidity</a>
+                        </li>
+                        <li>
+                            <a href="cloud.html">Cloudiness</a>
+                        </li>
+                        <li>
+                            <a href="wind.html">Wind Speed</a>
+                        </li>                      
+                        <li role="separator" class="divider">
+                        </li>
+                        <li>
+                            <a href="comparison.html">Comparison</a>
+                        </li>
+                        <li>
+                            <a href="data.html">Data</a>
+                        </li>
+                    </ul>
+            <!-- /.navbar-collapse -->
+            </div>                    
+        </div>
+
+        <div class="container">
+            <div class="col-md-12">
+            </div>
+        </div>
+    </nav>    
+
+        <div class = "container">
+            <div class = "row row-grid">
+                    <div class = "col-md-8">               
+                    <div class = "box box-left">
+                        <section id = "intro">
+                            <h1>Summary: Latitude vs. Variables</h1>
+                            <hr>
+                            <figure>
+                                <a target = "_blank" href = "Latitude_vs_Longitude.png">
+                                    <img id = "viz-main" src = "Latitude_vs_Longitude.png" alt = "Cities Locations Latitude vs. Longitude">
+                                </a>
+                            </figure>
+
+                            <section id = "summary">
+                                <p> What's the weather like as we approach the equator?</p>
+                                <br>
+                                <p> The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API, a simple Python library, to assemble a dataset on over 500 cities of varying distance from the equator.</p>
+                                <br>
+                                <p> After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Variables we looked at included:</p>
+                                <ul>
+                                    <li>Temperature (F) vs Latitude</li>
+                                    <li>Humidity (%) vs Latitude</li>
+                                    <li>Cloudiness (%) vs Latitude</li>
+                                    <li>Wind Speed (mph) vs Latitude</li>                                
+                                </ul>
+                                <p> This site provides the source data and visualizations created as part of the analysis, as well as explanations of any trends and correlations witnessed.</p>
+                                <p> It was found necessary to first plot an additional graph (long vs lat) to locate the cities and better understand if the random selection was accounting for most of the surface of the earth, which seems to be the case.</p>
+                                <p> 1/ Most of the data points are located on the right part of the plots, on the positive axis which correlates directly with the amount of apparent and emerged land area on earth suggesting that there will be a higher number of weather stations on the north hemisphere.This note is important to explain with the data can potentially be skewed.</p>
+                                <p> 2/ Most of the highest temperature peak at the equator (latitude 0) level following a bell curve shape. The equatorial cities are more exposed to the sun.</p>
+                                <p> 3/ However City temperature and Humidity seem not to have a strong correlation.</p>
+                                <p> 4/ Most of the wind speed concentration is located between 0 to 10 mph and no strong correlation exist with higher wind speeds closer to the equator.</p>
+
+                                </section>
+                        </section>
+                    </div>
+                </div>
+
+        <div class = "col-md-4">
+            <div class = "box box-right">
+                <h2> Visualizations</h2>
+                <hr>
+
+                <div class ="row">
+                    <div class = "col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="temperature.html">
+                                <img id ="landing-viz" src = "Temperature.png" alt ="Temperature vs. Latitude">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class = "col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="humidity.html">
+                                <img id ="landing-viz" src = "Humidity.png" alt ="Humidity vs. Latitude">
+                            </a>
+                        </figure>
+                    </div>                    
+
+                    <div class = "col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="cloud.html">
+                                <img id ="landing-viz" src = "Cloudiness.png" alt ="Cloudiness vs. Latitude">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class = "col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="wind.html">
+                                <img id ="landing-viz" src = "Wind_speed.png" alt ="Wind vs. Latitude">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<div class="footer">
+        <div class="container">
+                <div class="col-md-12">
+                    <div class="authorline">
+                        <p>
+                            Charlie Fortuno | Bootcamp UCB Data Analytics |
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    
